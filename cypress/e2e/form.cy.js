@@ -14,10 +14,10 @@ context('More information form', () => {
 
         // Locate the form fields and populate
         cy.get('@form').find('input#wpforms-606-field_0').type('Test')
-        cy.get('@form').find('input#wpforms-606-field_0-last').type('User')
-        cy.get('@form').find('input#wpforms-606-field_3').type('Testing')
+        cy.get('@form').find('input#wpforms-606-field_0-last').type('Developer')
+        cy.get('@form').find('input#wpforms-606-field_3').type('Test Developer')
         cy.get('@form').find('input#wpforms-606-field_1').type('testing@example.com')
-        cy.get('@form').find('input#wpforms-606-field_4').type('Darth')
+        cy.get('@form').find('input#wpforms-606-field_4').type('Title')
         cy.get('@form').find('input#wpforms-606-field_5').type('Australia')
         cy.get('@form').find('textarea#wpforms-606-field_2').type('These are some comments and notes')
 
@@ -27,7 +27,7 @@ context('More information form', () => {
 
 
     })
-    it('Attempt to submit a more information form with missing require fields.', () => {
+    it('Attempt to submit a more information form with missing required fields.', () => {
 
         cy.get('a.fl-button').contains('MORE INFORMATION').scrollIntoView().click()
         cy.get('div.wpforms-container').first().as('form').should('be.visible')
