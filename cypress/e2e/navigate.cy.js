@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 context('Navigation', () => {
   beforeEach(() => {
     cy.visit(Cypress.config("baseUrl"))
